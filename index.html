@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RIVAYAT by QASH</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3EBDD;--ink:#242020;--wine:#35121C;--gold:#B99A58;--card:#ece2d0;--line:rgba(36,32,32,.16);--on-wine:#F3EBDD;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;--ur:"Noto Nastaliq Urdu","Noto Naskh Arabic",serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1618;--ink:#F3EBDD;--card:#2a2023;--line:rgba(243,235,221,.18)}}
+:root[data-theme="dark"]{--bg:#1c1618;--ink:#F3EBDD;--card:#2a2023;--line:rgba(243,235,221,.18)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.65 var(--sans);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--wine);z-index:60}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:.01em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.ann{background:var(--wine);color:var(--on-wine);text-align:center;font-size:12px;letter-spacing:.14em;padding:9px 12px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-size:26px;letter-spacing:.32em;font-weight:500;text-align:center;line-height:1}
+.logo small{display:block;font:400 8px var(--sans);letter-spacing:.4em;color:var(--gold);margin-top:5px}
+.ib{width:44px;height:44px;display:grid;place-items:center;position:relative}
+.ib svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.3}
+.cnt{position:absolute;top:5px;right:3px;background:var(--gold);color:#242020;font-size:10px;min-width:17px;height:17px;border-radius:9px;display:grid;place-items:center;font-weight:500}
+nav.d{display:none;gap:30px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+nav.d a{padding:8px 0;border-bottom:1px solid transparent}nav.d a:hover,nav.d a.on{border-color:var(--gold)}
+.menu{position:fixed;inset:0;background:var(--wine);color:var(--on-wine);z-index:70;padding:24px 28px;transform:translateX(-100%);transition:transform .3s}
+.menu.open{transform:none}.menu a{display:block;font:500 30px var(--serif);padding:11px 0;border-bottom:1px solid rgba(185,154,88,.3)}
+.menu .x{position:absolute;top:14px;right:14px;font-size:30px;width:44px;height:44px}
+@media(min-width:900px){nav.d{display:flex}.burger{display:none}.bar{height:78px}}
+.btn{display:inline-block;min-height:46px;padding:13px 30px;background:var(--wine);color:var(--on-wine);font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--wine);transition:.25s}
+.btn:hover{background:transparent;color:var(--wine)}
+.btn.gold{background:transparent;color:var(--on-wine);border-color:var(--gold)}.btn.gold:hover{background:var(--gold);color:#242020}
+@media(prefers-color-scheme:dark){.btn:not(.gold){background:var(--gold);border-color:var(--gold);color:#242020}}
+.hero{background:var(--wine);color:var(--on-wine);overflow:hidden}
+.hero .wrap{display:grid;gap:10px;align-items:center;padding-top:44px;padding-bottom:0}
+.hero .ur{font:400 44px/1.8 var(--ur);color:var(--gold)}
+.hero h1{font-size:clamp(54px,15vw,120px);letter-spacing:.2em;margin-right:-.2em;font-weight:500}
+.hero .by{letter-spacing:.5em;color:var(--gold);font-size:13px;margin:6px 0 18px}
+.hero p.tag{letter-spacing:.2em;font-size:11px;margin-bottom:28px;max-width:30em}
+.hero .art{max-width:420px;width:100%;margin:26px auto 0;align-self:end}
+.hero .art svg{display:block;width:100%;height:auto}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.2fr 1fr;min-height:640px;padding-top:0}.hero .art{margin:40px 0 0 auto}}
+section.s{padding:72px 0}
+.sh{text-align:center;margin-bottom:38px}.sh h2{font-size:clamp(30px,6vw,46px)}.sh p{color:var(--gold);letter-spacing:.2em;font-size:12px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 14px}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr);gap:40px 24px}}
+.col3{display:grid;gap:16px}@media(min-width:760px){.col3{grid-template-columns:repeat(3,1fr)}}
+.cc{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--card)}
+.cc svg,.pc .im svg{width:100%;height:100%;display:block;transition:transform .8s}
+.cc:hover svg{transform:scale(1.04)}
+.cc .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 20px 22px;color:#F3EBDD;background:linear-gradient(transparent,rgba(53,18,28,.88))}
+.cc h3{font-size:27px}.cc span{font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.pc{display:block}.pc .im{aspect-ratio:3/4;overflow:hidden;background:var(--card);position:relative}
+.pc:hover .im svg{transform:scale(1.03)}
+.pc .tg{position:absolute;top:10px;left:10px;background:var(--bg);font-size:10px;letter-spacing:.16em;padding:3px 9px}
+.pc .qv{position:absolute;left:0;right:0;bottom:0;background:rgba(53,18,28,.92);color:#F3EBDD;text-align:center;font-size:11px;letter-spacing:.2em;padding:12px;opacity:0;transition:.3s}
+.pc:hover .qv{opacity:1}@media(hover:none){.pc .qv{display:none}}
+.pc h3{font-size:19px;margin-top:12px}.pc .pr{font-size:14px;color:var(--gold);letter-spacing:.06em;margin-top:2px}
+.story{background:var(--wine);color:var(--on-wine);text-align:center}
+.story h2{font-size:clamp(30px,6vw,52px);max-width:14em;margin:0 auto 22px}.story p{max-width:36em;margin:0 auto 14px;font-family:var(--serif);font-size:20px;line-height:1.7}
+.rule{width:56px;height:1px;background:var(--gold);margin:0 auto 26px}
+footer{background:#242020;color:#F3EBDD;padding:56px 0 30px;font-size:14px}
+footer .g{display:grid;gap:34px}@media(min-width:760px){footer .g{grid-template-columns:1.5fr 1fr 1fr 1.2fr}}
+footer h4{font:400 11px var(--sans);letter-spacing:.24em;color:var(--gold);margin-bottom:12px}
+footer a{display:block;padding:5px 0;opacity:.85}footer a:hover{color:var(--gold)}
+footer .c{margin-top:34px;padding-top:18px;border-top:1px solid rgba(243,235,221,.15);font-size:12px;opacity:.7}
+.page{padding:36px 0 80px;min-height:60vh}
+.crumb{font-size:12px;letter-spacing:.14em;color:var(--gold);margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.chip{min-height:40px;padding:8px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em}.chip.on{background:var(--wine);color:var(--on-wine);border-color:var(--wine)}
+.pd{display:grid;gap:30px}@media(min-width:900px){.pd{grid-template-columns:1.1fr 1fr;gap:64px}}
+.gal .main{aspect-ratio:3/4;background:var(--card);overflow:hidden}.gal svg{width:100%;height:100%;display:block}
+.th{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.th button{aspect-ratio:1;background:var(--card);overflow:hidden;border:1px solid transparent}.th button.on{border-color:var(--gold)}
+.pd h1{font-size:clamp(32px,5vw,46px);margin:6px 0 10px}.pd .price{font-size:22px;color:var(--gold);margin-bottom:18px}
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 22px}.opt{min-width:48px;min-height:46px;padding:0 16px;border:1px solid var(--line);font-size:14px}.opt.on{background:var(--wine);color:var(--on-wine);border-color:var(--wine)}
+.lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);margin:8px 0 22px}.qty button{width:46px;height:46px;font-size:20px}.qty span{min-width:36px;text-align:center}
+.det{margin-top:28px;border-top:1px solid var(--line)}.det div{padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}.det b{font-weight:500;letter-spacing:.12em;font-size:11px;text-transform:uppercase;display:block;color:var(--gold)}
+.full{width:100%}
+.cl{display:grid;gap:30px}@media(min-width:900px){.cl{grid-template-columns:1.6fr 1fr;gap:60px}}
+.row{display:grid;grid-template-columns:84px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row .t{aspect-ratio:3/4;background:var(--card);overflow:hidden}.row svg{width:100%;height:100%;display:block}
+.row h3{font-size:19px}.row small{display:block;color:var(--gold);letter-spacing:.1em}.row .a{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.row .qty{margin:0}.row .qty button{width:40px;height:40px}.rm{font-size:12px;letter-spacing:.1em;text-decoration:underline;padding:10px 0}
+.box{background:var(--card);padding:26px;align-self:start}.box h3{font-size:26px;margin-bottom:14px}
+.ln{display:flex;justify-content:space-between;padding:6px 0;font-size:15px}.ln.tot{border-top:1px solid var(--line);margin-top:8px;padding-top:14px;font:500 22px var(--serif)}
+.note{font-size:12px;opacity:.75;margin-top:10px}
+label{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin:16px 0 6px}
+input,textarea{width:100%;min-height:48px;padding:12px 14px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:0}
+input:focus,textarea:focus,.btn:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.err{color:#8b2a2a;font-size:12px;margin-top:4px}
+@media(prefers-color-scheme:dark){.err{color:#e0a0a0}}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--wine);color:#F3EBDD;padding:13px 22px;font-size:13px;letter-spacing:.08em;opacity:0;pointer-events:none;transition:.3s;z-index:90;border:1px solid var(--gold)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.srch{position:fixed;inset:0;background:var(--bg);z-index:80;padding:20px;overflow:auto;display:none}.srch.open{display:block}
+.srch .in{max-width:640px;margin:30px auto}.srch a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+.ok{text-align:center;max-width:560px;margin:0 auto}.ok h1{font-size:42px;margin:12px 0}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+:root{--acc:#35121C}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--acc:#B99A58}}
+:root[data-theme="dark"]{--acc:#B99A58}
+.ann{font-size:11px;letter-spacing:.26em;padding:10px 12px}
+header{background:var(--wine);color:#F3EBDD;border-bottom:1px solid rgba(185,154,88,.5)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;height:72px}
+.burger{justify-self:start}.bar>div{justify-self:end}
+.logo{display:block;line-height:0}.logo img{display:block;height:56px;width:auto;outline:1px solid rgba(185,154,88,.55)}
+.menu .ml-logo{display:block;width:min(78%,300px);height:auto;margin-top:34px}
+@media(min-width:900px){.bar{grid-template-columns:auto 1fr auto;height:100px}.logo{order:-1}nav.d{justify-self:center;gap:38px;font-size:11px;letter-spacing:.24em}.logo img{height:80px}}
+.hero{background:var(--bg);color:var(--ink);padding:0;overflow:visible}
+.hp{max-width:960px;margin:0 auto}
+.hl{display:block;width:100%;height:auto;animation:fi 1.4s ease both}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.hb{text-align:center;padding:46px 22px 8px;max-width:34em;margin:0 auto}
+.hb p{font:italic 400 23px/1.5 var(--serif);margin-bottom:28px}
+@media(min-width:900px){.hero{padding:64px 24px 0}.hp{outline:1px solid var(--gold);outline-offset:14px}.hb{padding-top:70px}}
+.fl{display:block;width:min(100%,290px);height:auto}
+section.s{padding:96px 0}
+.sh{margin-bottom:48px}.sh h2{font-weight:400;letter-spacing:.04em}
+.sh h2::after{content:"";display:block;width:44px;height:1px;background:var(--gold);margin:18px auto 0}
+.sh p,.crumb,.det b,.row small,.pd .price,.pc .pr{color:var(--acc)}
+.sh p{letter-spacing:.3em;font-size:11px}
+.pc h3{font-weight:400;font-size:20px;letter-spacing:.02em}.pc .pr{font-size:13px;letter-spacing:.16em}
+.pc .im svg,.cc svg{transition:transform 1.2s ease}
+.btn{padding:14px 38px;letter-spacing:.26em}
+.story{padding:110px 0!important}
+.story h2{font-weight:400;letter-spacing:.06em}
+  .cc .cap{padding:80px 22px 26px}.cc h3{font-weight:400;letter-spacing:.04em}
+
+::selection{background:var(--wine);color:#F3EBDD}
+body{line-height:1.75}
+.page{animation:fi .7s ease both}
+.grid{gap:34px 16px}@media(min-width:900px){.grid{gap:64px 30px}}
+.pillars{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pillars>div{padding:46px 28px;text-align:center}.pillars>div+div{border-top:1px solid var(--line)}
+.pillars h3{font-size:28px;font-weight:400;margin-bottom:10px}.pillars p{font-size:15px;max-width:22em;margin:0 auto;opacity:.85}
+@media(min-width:760px){.pillars{grid-template-columns:repeat(3,1fr)}.pillars>div+div{border-top:0;border-left:1px solid var(--line)}}
+.svc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 48px;padding:30px 0 0;font-size:13px;letter-spacing:.14em;color:var(--acc)}
+.cc::after{content:"";position:absolute;inset:14px;border:1px solid rgba(185,154,88,.6);pointer-events:none;transition:inset .6s ease}
+.cc:hover::after{inset:20px}
+.cc .cap{text-align:center;padding:90px 22px 34px}.cc h3{font-size:30px}
+.pc .tg{background:var(--wine);color:#F3EBDD;font-size:9px;letter-spacing:.24em;padding:5px 10px;top:0;left:0}
+.pc h3{margin-top:16px}.pc .pr{margin-top:4px}
+@media(min-width:900px){.pd>div:last-child{position:sticky;top:130px;align-self:start}}
+.story p{font-size:21px;line-height:1.8}.story p:first-of-type{font-style:italic;font-size:26px}
+.story .rule{width:1px;height:56px}
+footer{padding:80px 0 34px}footer h4{letter-spacing:.3em}
+</style></head><body>
+<div class="ann">COMPLIMENTARY DELIVERY ON ORDERS ABOVE PKR 15,000 · WINTER ’26 NOW ARRIVING</div>
+<header><div class="wrap bar">
+<button class="ib burger" aria-label="Menu" onclick="menu(1)"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+<nav class="d" id="nl"></nav>
+<a class="logo" href="#home" aria-label="RIVAYAT by QASH — home"><img data-logo alt="RIVAYAT by QASH"></a>
+<div style="display:flex"><button class="ib" aria-label="Search" onclick="srch(1)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
+<a class="ib" href="#cart" aria-label="Bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 016 0v2"/></svg><span class="cnt" id="cnt">0</span></a></div>
+</div></header>
+<div class="menu" id="menu"><button class="x" onclick="menu(0)" aria-label="Close">×</button><img data-logo class="ml-logo" alt="RIVAYAT by QASH"><div id="ml" style="margin-top:22px"></div></div>
+<div class="srch" id="srch"><button class="ib" style="margin-left:auto" onclick="srch(0)" aria-label="Close">✕</button><div class="in"><input id="sq" placeholder="Search suits, fabrics, shawls" oninput="sres()"><div id="sr"></div></div></div>
+<main id="app"></main>
+<footer><div class="wrap"><div class="g">
+<div><img data-logo class="fl" alt="RIVAYAT by QASH"></div>
+<div><h4>SHOP</h4><a href="#women">Women’s Collection</a><a href="#men">Men’s Collection</a><a href="#shawls">Shawls</a><a href="#new">New Arrivals</a></div>
+<div><h4>CUSTOMER CARE</h4><a href="#contact">Contact us</a><a href="#policy">Shipping policy</a><a href="#policy">Exchange policy</a></div>
+<div><h4>CONTACT</h4><a id="f1"></a><a id="f2"></a><a id="f3"></a><a id="f4" target="_blank" rel="noopener"></a></div>
+</div><div class="c">© 2026 RIVAYAT by QASH. Prototype — sample products and placeholder details.</div></div></footer>
+<div class="toast" id="toast"></div>
+<script>
+const LOGO="logo.png"; /* official logo, used unaltered */
+/* ===== EDIT HERE: store settings ===== */
+const CFG={deliveryFee:350,freeOver:15000,whatsapp:"+92 3XX XXXXXXX [PLACEHOLDER]",phone:"+92 3XX XXXXXXX [PLACEHOLDER]",email:"hello@your-domain.pk [PLACEHOLDER]",insta:"https://instagram.com/YOUR_HANDLE",instaLabel:"Instagram @YOUR_HANDLE [PLACEHOLDER]"};
+const W=["XS","S","M","L","XL"],M=["Unstitched 4.5 m","Unstitched 5.5 m"],S=["One size"];
+const WINE="#35121C",GOLD="#B99A58",CREAM="#F3EBDD",CHAR="#242020";
+/* ===== EDIT HERE: products. Set img:"https://…" or a data: URL to show a real photograph (list several in gallery:[…]) ===== */
+const P=[
+{id:"w1",col:"women",sub:"Formal",name:"Mehr Embroidered Chiffon Suit",price:24500,c:WINE,bg:CREAM,kind:"suit",opts:W,isNew:1,desc:"A three-piece formal suit with hand-finished zari borders on the hem and sleeves, paired with a sheer chiffon dupatta.",fabric:"Chiffon shirt, raw silk trouser, chiffon dupatta",det:"3-piece · Zari border embroidery · Dry clean only"},
+{id:"w2",col:"women",sub:"Formal",name:"Zarina Raw Silk Kameez Set",price:28900,c:GOLD,bg:WINE,kind:"suit",opts:W,isNew:1,desc:"Structured raw silk kameez in antique gold with a tonal embroidered neckline and straight-cut trouser.",fabric:"Raw silk, cotton-silk lining",det:"2-piece · Tonal thread work · Dry clean only"},
+{id:"w3",col:"women",sub:"Everyday",name:"Sehar Printed Lawn Suit",price:8900,c:"#5a2a37",bg:CREAM,kind:"suit",opts:W,desc:"Breathable premium lawn with a quiet block-print border. Made for long days and warm weather.",fabric:"100% premium lawn",det:"3-piece · Machine wash cold"},
+{id:"w4",col:"women",sub:"Everyday",name:"Aiman Khaddar Co-ord",price:11200,c:CHAR,bg:CREAM,kind:"suit",opts:W,desc:"A soft khaddar kameez and trouser with fine gold piping, tailored for easy winter dressing.",fabric:"Khaddar, brushed finish",det:"2-piece · Gold piping · Gentle wash"},
+{id:"m1",col:"men",sub:"Seasonal",name:"Sultan Wash & Wear Fabric",price:6800,c:"#d8cdb6",bg:WINE,kind:"fabric",opts:M,desc:"A smooth, wrinkle-resistant blend woven for the everyday shalwar kameez. Cut to length for one suit.",fabric:"Polyester-viscose blend",det:"Unstitched · Wrinkle resistant · Machine wash"},
+{id:"m2",col:"men",sub:"Winter",name:"Nawab Egyptian Cotton Winter Fabric",price:9400,c:CHAR,bg:CREAM,kind:"fabric",opts:M,isNew:1,desc:"A dense cotton with a soft brushed back. It holds a crisp drape and keeps its colour wash after wash.",fabric:"Egyptian cotton, brushed",det:"Unstitched · Winter weight · Dry clean preferred"},
+{id:"m3",col:"men",sub:"Premium",name:"Shahzada Boski Blend Fabric",price:12800,c:"#e6d9bf",bg:WINE,kind:"fabric",opts:M,isNew:1,desc:"A lustrous boski-style weave with a silk-like handle, chosen for weddings and Eid.",fabric:"Cotton-silk blend",det:"Unstitched · Lustrous finish · Dry clean only"},
+{id:"m4",col:"men",sub:"Seasonal",name:"Mirza Karandi Fabric",price:7600,c:WINE,bg:CREAM,kind:"fabric",opts:M,desc:"A textured karandi with a deep burgundy tone for cooler months.",fabric:"Karandi weave",det:"Unstitched · Textured weave · Dry clean only"},
+{id:"s1",col:"shawls",sub:"Women",name:"Pashmina-Blend Kani Shawl",price:14500,c:WINE,bg:CREAM,kind:"shawl",opts:S,isNew:1,desc:"A featherweight wrap in a pashmina blend with a hand-finished fringe.",fabric:"Wool-silk blend",det:"90 × 200 cm · Fringed edge · Dry clean only"},
+{id:"s2",col:"shawls",sub:"Women",name:"Kashmiri Embroidered Wool Shawl",price:19800,c:GOLD,bg:WINE,kind:"shawl",opts:S,isNew:1,desc:"Fine wool with a sozni-inspired border worked in tonal thread.",fabric:"Fine wool",det:"100 × 220 cm · Border embroidery · Dry clean only"},
+{id:"s3",col:"shawls",sub:"Men",name:"Men’s Merino Wool Shawl",price:9900,c:CHAR,bg:CREAM,kind:"shawl",opts:S,desc:"A generous merino shawl in charcoal with a woven gold selvedge.",fabric:"100% merino wool",det:"110 × 220 cm · Woven selvedge · Dry clean only"},
+{id:"s4",col:"shawls",sub:"Heritage",name:"Heritage Jamawar Shawl",price:22500,c:"#5a2a37",bg:CREAM,kind:"shawl",opts:S,desc:"A traditional jamawar weave in burgundy and gold, made to be handed down.",fabric:"Wool jamawar",det:"100 × 230 cm · Woven motif · Dry clean only"}];
+const COLS={women:["Women’s Stitched","Formal and everyday suits"],men:["Men’s Unstitched","Premium and seasonal fabrics"],shawls:["Shawls","Winter and traditional designs"],new:["New Arrivals","The latest from the atelier"]};
+const NAV=[["home","Home"],["women","Women’s Collection"],["men","Men’s Collection"],["shawls","Shawls"],["new","New Arrivals"],["contact","Contact"]];
+const $=s=>document.querySelector(s),pkr=n=>"PKR "+n.toLocaleString("en-PK");
+let cart=[],opt={},qty=1,filt="All";
+/* placeholder garment artwork — swap for photography via img in P */
+function art(p,v){if(p.img&&v!=="swatch")return `<img src="${(p.gallery&&p.gallery[v])||p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover">`;
+const c=p.c,d=p.bg,vb=v===1?"90 70 120 110":v===2?"60 220 180 160":"0 0 300 400";let g="";
+if(p.kind==="suit")g=`<path d="M100 250l25 120h23l2-110h4l2 110h23l25-120z" fill="${c}" opacity=".78"/><path d="M104 92l32-12q14 14 28 0l32 12 8 160H96z" fill="${c}"/><path d="M104 92L68 205l20 6 24-72zM196 92l36 113-20 6-24-72z" fill="${c}"/><path d="M96 238h108M136 80q14 20 28 0" stroke="${GOLD}" stroke-width="2" fill="none"/><path d="M98 246h104" stroke="${GOLD}" stroke-width="1" stroke-dasharray="3 3"/><path d="M110 88q40 40 80 0" stroke="${GOLD}" stroke-width="1" fill="none"/>`;
+else if(p.kind==="fabric")g=`<rect x="60" y="250" width="180" height="40" rx="3" fill="${c}"/><rect x="70" y="205" width="170" height="40" rx="3" fill="${c}" opacity=".85"/><rect x="55" y="160" width="185" height="40" rx="3" fill="${c}" opacity=".7"/><path d="M60 270h180M70 225h170M55 180h185" stroke="${GOLD}" stroke-width="1.5"/><rect x="95" y="90" width="110" height="64" rx="32" fill="${c}"/><path d="M95 122h110" stroke="${GOLD}" stroke-width="1.5"/>`;
+else g=`<path d="M85 70q65-28 130 0l16 250H69z" fill="${c}"/><path d="M85 70q65 30 130 0" stroke="${GOLD}" stroke-width="2" fill="none"/><path d="M80 290h140M82 250h136" stroke="${GOLD}" stroke-width="1.5" opacity=".9"/><path d="M69 320v36M81 320v36M93 320v36M105 320v36M117 320v36M129 320v36M141 320v36M153 320v36M165 320v36M177 320v36M189 320v36M201 320v36M213 320v36M225 320v36" stroke="${c}" stroke-width="2"/>`;
+return `<svg viewBox="${vb}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${p.name} (placeholder image)"><defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${CREAM}" stop-opacity=".18"/><stop offset=".55" stop-color="${CREAM}" stop-opacity="0"/><stop offset="1" stop-color="${CHAR}" stop-opacity=".28"/></linearGradient></defs><rect x="0" y="0" width="300" height="400" fill="${d}"/>${g}<rect width="300" height="400" fill="url(#vg)"/></svg>`}
+const card=p=>`<a class="pc" href="#p-${p.id}"><div class="im">${art(p)}${p.isNew?'<span class="tg">NEW</span>':""}<div class="qv">QUICK VIEW</div></div><h3>${p.name}</h3><div class="pr">${pkr(p.price)}</div></a>`;
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),1800)}
+function menu(o){$("#menu").classList.toggle("open",!!o)}
+function srch(o){$("#srch").classList.toggle("open",!!o);if(o){$("#sq").focus();sres()}}
+function sres(){const q=$("#sq").value.toLowerCase();$("#sr").innerHTML=P.filter(p=>(p.name+p.col+p.fabric).toLowerCase().includes(q)).map(p=>`<a href="#p-${p.id}" onclick="srch(0)"><span>${p.name}</span><span>${pkr(p.price)}</span></a>`).join("")||"<p style='padding:14px 0'>No matches. Try “silk”, “wool” or “lawn”.</p>"}
+const sub=()=>cart.reduce((s,i)=>s+i.p.price*i.q,0),dlv=()=>!cart.length||sub()>=CFG.freeOver?0:CFG.deliveryFee;
+function add(id){const p=P.find(x=>x.id===id),o=opt[id]||(p.opts.length===1?p.opts[0]:null);if(!o){toast("Please select an option");return}
+const f=cart.find(i=>i.p.id===id&&i.o===o);f?f.q+=qty:cart.push({p,o,q:qty});upd();toast("Added to your bag")}
+function chg(k,d){const i=cart[k];i.q=Math.max(1,i.q+d);upd();route()}function rem(k){cart.splice(k,1);upd();route()}
+function upd(){$("#cnt").textContent=cart.reduce((s,i)=>s+i.q,0)}
+function pick(id,o){opt[id]=o;route()}function setq(d){qty=Math.max(1,qty+d);route()}
+function home(){const a=P.filter(p=>p.isNew).slice(0,4);return `<section class="hero"><div class="hp"><img class="hl" src="${LOGO}" alt="RIVAYAT by QASH. An expression of timeless elegance."></div><div class="hb"><p>Formal wear, fine fabrics and heritage shawls, made to be kept.</p><a class="btn" href="#women">Explore Collection</a></div></section>
+<section class="s"><div class="wrap"><div class="sh"><h2>The Collections</h2><p>CRAFTED FOR EVERY OCCASION</p></div><div class="col3">${[["women",P[1],"Women’s Stitched"],["men",P[6],"Men’s Unstitched"],["shawls",P[9],"Shawls"]].map(x=>`<a class="cc" href="#${x[0]}">${art(x[1])}<div class="cap"><h3>${x[2]}</h3><span>VIEW COLLECTION</span></div></a>`).join("")}</div></div></section>
+<section class="s" style="padding-top:0"><div class="wrap"><div class="sh"><h2>New Arrivals</h2></div><div class="grid">${a.map(card).join("")}</div><p style="text-align:center;margin-top:40px"><a class="btn" href="#new">View all</a></p></div></section>
+<section class="s" style="padding-bottom:0"><div class="wrap"><div class="sh"><h2>The House of Rivayat</h2><p>HERITAGE, CRAFT, FABRIC</p></div><div class="pillars"><div><h3>Heritage</h3><p>Silhouettes and motifs drawn from the subcontinent’s textile traditions, reinterpreted for today.</p></div><div><h3>Craft</h3><p>Borders, necklines and hems finished by hand, in small batches.</p></div><div><h3>Fabric</h3><p>Lawn, raw silk, khaddar, merino and fine wool, chosen for how they feel and fall.</p></div></div><div class="svc"><span>Cash on delivery nationwide</span><span>Easy exchange</span><span>Complimentary delivery above ${pkr(CFG.freeOver)}</span></div></div></section>
+<section class="s story"><div class="wrap"><div class="rule"></div><h2>A LEGACY WOVEN IN EVERY THREAD.</h2><p>Rivayat means tradition: the stories, skills and standards passed from one generation to the next.</p><p>Each piece begins with fabric chosen for its hand and drape, and is finished by artisans who treat embroidery as an inheritance, not a trend.</p><p>We design for people who dress with intention, and for wardrobes that last.</p></div></section>`}
+function coll(k){const t=COLS[k];let L=k==="new"?P.filter(p=>p.isNew):P.filter(p=>p.col===k);const subs=["All",...new Set(L.map(p=>p.sub))];if(!subs.includes(filt))filt="All";if(filt!=="All")L=L.filter(p=>p.sub===filt);
+return `<div class="page wrap"><div class="sh"><div class="crumb">COLLECTION</div><h2>${t[0]}</h2><p>${t[1].toUpperCase()}</p></div>${k==="new"?"":`<div class="chips">${subs.map(s=>`<button class="chip ${s===filt?"on":""}" onclick="filt='${s}';route()">${s}</button>`).join("")}</div>`}<div class="grid">${L.map(card).join("")}</div></div>`}
+let gv=0;
+function prod(id){const p=P.find(x=>x.id===id);if(!p)return "<div class='page wrap'>Product not found.</div>";const rel=P.filter(x=>x.col===p.col&&x.id!==id).slice(0,4);
+return `<div class="page wrap"><div class="crumb"><a href="#${p.col}">${COLS[p.col][0].toUpperCase()}</a></div><div class="pd"><div class="gal"><div class="main">${art(p,gv)}</div><div class="th">${[0,1,2].map(i=>`<button class="${gv===i?"on":""}" onclick="gv=${i};route()" aria-label="View ${i+1}">${art(p,i)}</button>`).join("")}</div></div>
+<div><h1>${p.name}</h1><div class="price">${pkr(p.price)}</div><p>${p.desc}</p><div style="margin-top:22px" class="lbl">${p.opts===W?"Size":p.opts===M?"Length":"Size"}</div><div class="opts">${p.opts.map(o=>`<button class="opt ${(opt[id]||(p.opts.length===1&&o))===o?"on":""}" onclick="pick('${id}','${o}')">${o}</button>`).join("")}</div>
+<div class="lbl">Quantity</div><div class="qty"><button onclick="setq(-1)" aria-label="Less">−</button><span>${qty}</span><button onclick="setq(1)" aria-label="More">+</button></div><button class="btn full" onclick="add('${id}')">Add to Cart</button>
+<div class="det"><div><b>Fabric</b>${p.fabric}</div><div><b>Details</b>${p.det}</div><div><b>Delivery</b>Cash on delivery across Pakistan. Exchange within 7 days (placeholder policy).</div></div></div></div>
+<div class="sh" style="margin-top:80px"><h2>You may also like</h2></div><div class="grid">${rel.map(card).join("")}</div></div>`}
+function cartv(){if(!cart.length)return `<div class="page wrap sh"><h2>Your bag is empty</h2><p style="margin:14px 0 24px;color:inherit">Explore the collections to begin.</p><a class="btn" href="#women">Explore Collection</a></div>`;
+return `<div class="page wrap"><div class="sh"><h2>Shopping Bag</h2></div><div class="cl"><div>${cart.map((i,k)=>`<div class="row"><a class="t" href="#p-${i.p.id}">${art(i.p)}</a><div><h3>${i.p.name}</h3><small>${i.o}</small><div>${pkr(i.p.price)}</div><div class="a"><div class="qty"><button onclick="chg(${k},-1)" aria-label="Less">−</button><span>${i.q}</span><button onclick="chg(${k},1)" aria-label="More">+</button></div><button class="rm" onclick="rem(${k})">Remove</button></div></div></div>`).join("")}</div>${sum()}</div></div>`}
+function sum(btn=1){return `<div class="box"><h3>Order Summary</h3><div class="ln"><span>Subtotal</span><span>${pkr(sub())}</span></div><div class="ln"><span>Delivery</span><span>${dlv()?pkr(dlv()):"Complimentary"}</span></div><div class="ln tot"><span>Total</span><span>${pkr(sub()+dlv())}</span></div>${btn?`<a class="btn full" style="margin-top:18px;text-align:center" href="#checkout">Proceed to Checkout</a><p class="note">Free delivery above ${pkr(CFG.freeOver)}.</p>`:""}</div>`}
+function chk(){if(!cart.length){location.hash="cart";return ""}
+return `<div class="page wrap"><div class="sh"><h2>Checkout</h2></div><div class="cl"><div><label for="n">Full name</label><input id="n" autocomplete="name"><div class="err" id="e-n"></div><label for="m">Mobile number</label><input id="m" type="tel" inputmode="tel" placeholder="03XX XXXXXXX" autocomplete="tel"><div class="err" id="e-m"></div><label for="c">City</label><input id="c" autocomplete="address-level2"><div class="err" id="e-c"></div><label for="a">Complete delivery address</label><textarea id="a" rows="3" autocomplete="street-address"></textarea><div class="err" id="e-a"></div><label>Payment</label><div class="opt on" style="display:flex;align-items:center;padding:0 16px;width:100%;justify-content:flex-start">Cash on Delivery (COD)</div></div><div>${sum(0)}<button class="btn full" style="margin-top:14px" onclick="place()">Confirm Order</button><p class="note">Pay in cash when your order arrives. Prototype: confirming does not transmit or save the order.</p></div></div></div>`}
+let last=null;
+function place(){const v={n:$("#n").value.trim(),m:$("#m").value.replace(/[\s-]/g,""),c:$("#c").value.trim(),a:$("#a").value.trim()};let ok=1;
+const E=(k,t)=>{$("#e-"+k).textContent=t;if(t)ok=0};E("n",v.n.length<3?"Enter your full name.":"");E("m",/^(03\d{9}|\+923\d{9})$/.test(v.m)?"":"Enter a valid mobile number, e.g. 0300 1234567.");E("c",v.c?"":"Enter your city.");E("a",v.a.length<10?"Enter your complete address.":"");if(!ok)return;
+last={v,items:cart.map(i=>({n:i.p.name,o:i.o,q:i.q,t:i.p.price*i.q})),s:sub(),d:dlv(),no:"RV-"+Math.floor(100000+Math.random()*900000)};cart=[];upd();location.hash="done"}
+function done(){if(!last)return "<div class='page wrap sh'><h2>No recent order</h2></div>";const o=last;const msg=encodeURIComponent(`New order ${o.no}\n${o.items.map(i=>`${i.q}× ${i.n} (${i.o}) – ${pkr(i.t)}`).join("\n")}\nTotal: ${pkr(o.s+o.d)} (COD)\n${o.v.n}, ${o.v.m}\n${o.v.c}, ${o.v.a}`);const num=CFG.whatsapp.replace(/\D/g,"");
+return `<div class="page wrap ok"><div class="crumb">ORDER PREVIEW</div><h1>Thank you, ${o.v.n.split(" ")[0]}</h1><p>Reference ${o.no}. This is a prototype: your order was <b>not</b> saved or sent anywhere.</p><div class="box" style="text-align:left;margin:24px 0">${o.items.map(i=>`<div class="ln"><span>${i.q}× ${i.n}<br><small>${i.o}</small></span><span>${pkr(i.t)}</span></div>`).join("")}<div class="ln"><span>Delivery</span><span>${o.d?pkr(o.d):"Complimentary"}</span></div><div class="ln tot"><span>Total (COD)</span><span>${pkr(o.s+o.d)}</span></div><p class="note">${o.v.c} · ${o.v.a}<br>${o.v.m}</p></div>${num.length>=10?`<a class="btn" href="https://wa.me/${num}?text=${msg}" target="_blank" rel="noopener">Send order on WhatsApp</a>`:`<p class="note">Add your WhatsApp number in CFG to enable sending this order by WhatsApp.</p>`}<p style="margin-top:20px"><a href="#home" style="text-decoration:underline">Continue shopping</a></p></div>`}
+const info=t=>`<div class="page wrap" style="max-width:720px"><div class="sh"><h2>${t}</h2></div>`;
+function contact(){return info("Contact")+`<p>Questions about sizing, fabric or an order? Reach us:</p><p style="margin-top:14px">Phone / WhatsApp: ${CFG.phone}<br>Email: ${CFG.email}<br>${CFG.instaLabel}<br>Studio address: [PLACEHOLDER]</p></div>`}
+function policy(){return info("Shipping & Exchange")+`<p><b>Shipping.</b> Delivery across Pakistan in [3–7] working days. Fee ${pkr(CFG.deliveryFee)}, free above ${pkr(CFG.freeOver)}.</p><p style="margin-top:14px"><b>Exchange.</b> Unworn, unwashed items with tags may be exchanged within [7] days. Unstitched fabric that has been cut cannot be exchanged.</p><p class="note">Placeholder wording. Replace with your real policy.</p></div>`}
+function route(){const h=(location.hash||"#home").slice(1);let o;
+if(h==="home")o=home();else if(COLS[h])o=coll(h);else if(h.startsWith("p-"))o=prod(h.slice(2));else if(h==="cart")o=cartv();else if(h==="checkout")o=chk();else if(h==="done")o=done();else if(h==="contact")o=contact();else if(h==="policy")o=policy();else o=home();
+$("#app").innerHTML=o;document.querySelectorAll("nav.d a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+h))}
+let lastH="";addEventListener("hashchange",()=>{const h=location.hash;if(h!==lastH){gv=0;qty=1;filt="All";scrollTo(0,0)}lastH=h;menu(0);route()});
+$("#nl").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");$("#ml").innerHTML=NAV.map(n=>`<a href="#${n[0]}" onclick="menu(0)">${n[1]}</a>`).join("");
+$("#f1").textContent=CFG.phone;$("#f2").textContent=CFG.email;$("#f3").textContent="WhatsApp: "+CFG.whatsapp;$("#f4").textContent=CFG.instaLabel;$("#f4").href=CFG.insta;
+document.querySelectorAll("img[data-logo]").forEach(i=>i.src=LOGO);
+route();
+</script></body></html>
+
+  
